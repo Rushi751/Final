@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react/jsx-no-comment-textnodes */
 import './App.css';
 import {useState} from "react"
 const Product=[
@@ -80,6 +82,7 @@ function App() {
                         <li className="nav-item"><a className="nav-link active" aria-current="page" href="#!">Home</a></li>
                         <li className="nav-item"><a className="nav-link" href="#!">About</a></li>
                         <li className="nav-item dropdown">
+                            // eslint-disable-next-line jsx-a11y/anchor-is-valid
                             <a className="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a className="dropdown-item" href="#!">All Products</a></li>
@@ -125,10 +128,7 @@ function App() {
 export default App;
 function Card({Product,setcartcount1,cartcount1}){
   const[addedToCart, setaddedToCart]=useState(false)
-  const styles={
-    top:"0.5rem",
-    right:"0.5rem"
-  }
+  
 return(
   <div className="col mb-5">
   <div className="card h-100">
